@@ -1,5 +1,10 @@
 /* ===== Selectores obligatorios ===== */
 
+p { 
+    color: #f0f0f0;
+    font-family: Arial;
+    font-size: 20px;
+}
 h2 {
     color: #6f4e37; /* marrón café */
     font-size: 22px;
