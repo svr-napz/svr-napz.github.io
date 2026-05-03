@@ -1,0 +1,111 @@
+/* ===== Selectores obligatorios ===== */
+
+h2 {
+    color: #6f4e37; /* marrón café */
+    font-size: 22px;
+}
+
+.titulo {
+    color: #4b2e2e; /* marrón oscuro */
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Georgia', serif;
+}
+
+#titulos {
+    color: #a67b5b; /* café claro */
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* ===== Estilos generales ===== */
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background-color: #f5e6d3; /* crema */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 15px;
+    background-color: #d2b48c; /* beige */
+}
+
+/* Navegación */
+nav {
+    background-color: #4b2e2e; /* marrón oscuro */
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #f5e6d3; /* crema */
+    text-decoration: none;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    border-bottom: 1px solid #c8a27c;
+}
+
+/* Artículos */
+article {
+    margin-bottom: 10px;
+}
+
+/* Imágenes */
+img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Aside */
+aside {
+    background-color: #e6ccb2; /* crema más oscuro */
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #4b2e2e;
+    color: #f5e6d3;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Párrafos */
+p {
+    font-size: 16px;
+    color: #3e2723; /* café oscuro */
+}
+
+/* Accesibilidad */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+}
+
+.skip-link:focus {
+    top: 0;
+}
