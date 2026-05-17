@@ -1,249 +1,512 @@
-/* RESET */
+/* =======================================================
+   RESET GENERAL
+   ======================================================= */
 
+/* 
+Elimina márgenes y espacios automáticos
+de todos los elementos
+*/
 *{
     margin: 0;
     padding: 0;
+
+    /* 
+    Hace que el padding y border
+    se incluyan dentro del tamaño total
+    de la caja
+    */
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =======================================================
+   BODY
+   ======================================================= */
 
 body{
+
+    /* Tipo de letra */
     font-family: Arial, sans-serif;
+
+    /* Fondo crema */
     background-color: #fff8f0;
+
+    /* Color general del texto */
     color: #3e2723;
+
+    /* Espaciado vertical del texto */
     line-height: 1.6;
 }
 
-/* ACCESIBILIDAD */
+/* =======================================================
+   LINK DE ACCESIBILIDAD
+   ======================================================= */
 
+/*
+Oculta el link visualmente
+pero sigue existiendo para accesibilidad
+*/
 .skip-link{
     position: absolute;
     left: -999px;
 }
 
-/* HEADER */
+/* =======================================================
+   HEADER
+   ======================================================= */
 
 header{
+
+    /* Fondo café claro */
     background-color: #d2b48c;
+
+    /* Centra el texto */
     text-align: center;
+
+    /* Espaciado interno */
     padding: 40px 20px;
 }
 
+/* LOGO */
+
 .logo{
+
+    /* Tamaño grande */
     font-size: 45px;
+
+    /* Color café oscuro */
     color: #4b2e2e;
+
+    /* Separación inferior */
     margin-bottom: 10px;
 }
 
+/* SUBTITULO */
+
 .subtitulo{
+
+    /* Color más suave */
     color: #6f4e37;
+
+    /* Tamaño mediano */
     font-size: 18px;
 }
 
-/* NAV */
+/* =======================================================
+   NAVBAR
+   ======================================================= */
 
 nav{
+
+    /* Fondo oscuro */
     background-color: #4b2e2e;
+
+    /* Espaciado */
     padding: 15px;
 }
 
+/* MENU */
+
 .menu{
+
+    /* ACTIVA FLEXBOX */
     display: flex;
+
+    /* Centra horizontalmente */
     justify-content: center;
+
+    /* Espacio entre items */
     gap: 30px;
+
+    /* Quita viñetas */
     list-style: none;
 }
 
+/* LINKS */
+
 .menu a{
+
+    /* Quita subrayado */
     text-decoration: none;
+
+    /* Texto blanco */
     color: white;
+
+    /* Negrita */
     font-weight: bold;
+
+    /* Animación suave */
     transition: 0.3s;
 }
 
+/* EFECTO HOVER */
+
 .menu a:hover{
+
+    /* Cambia color al pasar mouse */
     color: #d2b48c;
 }
 
-/* FLEXBOX PRINCIPAL */
+/* =======================================================
+   FLEXBOX PRINCIPAL
+   ======================================================= */
 
+/*
+CONTENEDOR FLEX
+*/
 .contenedor-flex{
+
+    /* Activa flexbox */
     display: flex;
+
+    /* Centra horizontalmente */
     justify-content: center;
+
+    /* Espacio entre tarjetas */
     gap: 25px;
+
+    /* Permite bajar tarjetas */
     flex-wrap: wrap;
+
+    /* Espaciado interno */
     padding: 40px;
 }
 
-/* ITEMS */
+/* =======================================================
+   ITEMS FLEX
+   ======================================================= */
 
+/*
+TARJETAS
+*/
 .item-flex{
+
+    /* Fondo blanco */
     background-color: white;
-    width: 400px;
+
+    /* Ancho fijo */
+    width: 350px;
+
+    /* Espaciado interno */
     padding: 25px;
+
+    /* Bordes redondeados */
     border-radius: 15px;
+
+    /* Sombra */
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+    /* Animación */
     transition: 0.3s;
 }
 
+/* EFECTO */
+
 .item-flex:hover{
+
+    /* Eleva tarjeta */
     transform: translateY(-5px);
 }
 
+/* TITULOS */
+
 .item-flex h2{
+
     color: #4b2e2e;
+
     margin-bottom: 15px;
+}
+
+/* =======================================================
+   IMAGEN PRINCIPAL
+   ======================================================= */
+
+.item-flex img{
+
+    /* Ocupa ancho del contenedor */
+    width: 100%;
+
+    /* Altura fija */
+    height: 300px;
+
+    /* Recorta imagen correctamente */
+    object-fit: cover;
+
+    /* Bordes suaves */
+    border-radius: 10px;
+}
+
+/* =======================================================
+   SECCION CAFES
+   ======================================================= */
+
+.cafes{
+
+    padding: 40px;
+}
+
+/* TITULO */
+
+.titulo-cafe{
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    color: #4b2e2e;
+
+    font-size: 35px;
+}
+
+/* =======================================================
+   CONTENEDOR DE CARDS
+   ======================================================= */
+
+/*
+CONTENEDOR FLEX HORIZONTAL
+*/
+.contenedor-cafes{
+
+    /* Activa flexbox */
+    display: flex;
+
+    /* Centra elementos */
+    justify-content: center;
+
+    /* Igual altura */
+    align-items: stretch;
+
+    /* Espacio entre cards */
+    gap: 25px;
+
+    /* Responsive */
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+/* =======================================================
+   CARDS
+   ======================================================= */
+
+/*
+ITEMS FLEX
+*/
+.card-cafe{
+
+    background-color: white;
+
+    width: 300px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+/* HOVER */
+
+.card-cafe:hover{
+
+    transform: translateY(-8px);
 }
 
 /* IMAGENES */
 
-img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* SECCION CAFES */
-
-.cafes{
-    padding: 40px;
-}
-
-.titulo-cafe{
-    text-align: center;
-    margin-bottom: 30px;
-    color: #4b2e2e;
-    font-size: 35px;
-}
-
-/* CONTENEDOR FLEX */
-
-.contenedor-cafes{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* CARDS */
-
-.card-cafe{
-    background-color: white;
-    width: 300px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card-cafe:hover{
-    transform: translateY(-10px);
-}
-
 .card-cafe img{
-    height: 250px;
+
+    width: 100%;
+
+    height: 200px;
+
     object-fit: cover;
+
+    border-radius: 10px;
+
     margin-bottom: 15px;
 }
 
+/* TITULOS */
+
 .card-cafe h3{
+
     color: #4b2e2e;
+
     margin-bottom: 10px;
 }
 
+/* PARRAFOS */
+
 .card-cafe p{
+
     color: #555;
 }
 
-/* FORMULARIO */
+/* =======================================================
+   FORMULARIO
+   ======================================================= */
 
 .pedido{
+
     background-color: white;
+
     width: 80%;
+
     margin: auto;
+
     margin-top: 40px;
+
     padding: 30px;
+
     border-radius: 15px;
+
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
+/* TITULO */
+
 .pedido h2{
+
     color: #4b2e2e;
+
     margin-bottom: 20px;
 }
 
+/* FORM */
+
 form{
+
+    /* FLEX VERTICAL */
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
+
+/* INPUTS */
 
 input,
 select,
 textarea{
+
     padding: 10px;
+
     border-radius: 8px;
+
     border: 1px solid #ccc;
 }
 
+/* BOTON */
+
 button{
+
     background-color: #6f4e37;
+
     color: white;
+
     border: none;
+
     padding: 12px;
+
     border-radius: 8px;
+
     cursor: pointer;
+
     transition: 0.3s;
 }
 
+/* HOVER */
+
 button:hover{
+
     background-color: #4b2e2e;
 }
 
-/* AVANCE HTML */
+/* =======================================================
+   AVANCE HTML
+   ======================================================= */
 
 .avance{
+
     background-color: white;
+
     width: 80%;
+
     margin: 40px auto;
+
     padding: 30px;
+
     border-radius: 15px;
+
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
+/* TITULO */
+
 .avance h2{
+
     color: #4b2e2e;
+
     margin-bottom: 15px;
 }
 
+/* SUBTEXTO */
+
 .mini-titulo{
+
     color: #777;
+
     margin-bottom: 20px;
 }
 
+/* PLANETA */
+
 .tierra{
+
     width: 200px;
+
     display: block;
+
     margin: 20px auto;
 }
 
-/* ASIDE */
+/* =======================================================
+   ASIDE
+   ======================================================= */
 
 aside{
+
     background-color: #d2b48c;
+
     width: 80%;
+
     margin: auto;
+
     padding: 20px;
+
     border-radius: 15px;
+
     text-align: center;
 }
 
-/* FOOTER */
+/* =======================================================
+   FOOTER
+   ======================================================= */
 
 footer{
+
     background-color: #4b2e2e;
+
     color: white;
+
     text-align: center;
+
     padding: 20px;
+
     margin-top: 40px;
 }
