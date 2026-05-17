@@ -1,6 +1,6 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,89 +12,151 @@
 <body>
 
     <!-- Accesibilidad -->
-    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+    <a href="#contenido" class="skip-link">
+        Saltar al contenido
+    </a>
 
     <!-- HEADER -->
     <header>
+
         <h1 class="logo">Cafe +</h1>
-        <p class="subtitulo">A cozy place to study and relax</p>
+
+        <p class="subtitulo">
+            A cozy place to study and relax
+        </p>
+
     </header>
 
     <!-- NAV -->
     <nav aria-label="Menú principal">
+
         <ul class="menu">
+
             <li><a href="#">Inicio</a></li>
+
             <li><a href="#">Nuestro Café</a></li>
-            <li><a href="#">Estudiantes</a></li>
+
+            <li><a href="#">Especialidades</a></li>
+
             <li><a href="#">Contacto</a></li>
+
         </ul>
+
     </nav>
 
     <!-- MAIN -->
     <main id="contenido">
 
-        <!-- CONTENEDOR FLEX -->
+        <!-- FLEXBOX -->
         <div class="contenedor-flex">
 
-            <!-- TARJETA 1 -->
+            <!-- TARJETA -->
             <section class="item-flex">
+
                 <h2>Bienvenidos</h2>
 
                 <article>
+
                     <p>
-                        Disfruta de un ambiente cálido, tranquilo y perfecto
-                        para estudiar acompañado de un buen café.
+                        Disfruta de un ambiente cálido, tranquilo
+                        y perfecto para estudiar acompañado
+                        de un buen café.
                     </p>
+
                 </article>
+
             </section>
 
-            <!-- TARJETA 2 -->
+            <!-- TARJETA -->
             <section class="item-flex">
+
                 <h2>Nuestro Café</h2>
 
                 <article>
+
                     <img src="https://plus.unsplash.com/premium_photo-1675435644687-562e8042b9db?q=80&w=749&auto=format&fit=crop"
                     alt="Taza de café">
+
                 </article>
-            </section>
 
-            <!-- TARJETA 3 -->
-            <section class="item-flex">
-                <h2>Especialidades</h2>
-
-                <ul>
-                    <li>Café americano</li>
-                    <li>Cappuccino</li>
-                    <li>Chocolate caliente</li>
-                    <li>Postres artesanales</li>
-                </ul>
-            </section>
-
-            <!-- TARJETA 4 -->
-            <section class="item-flex">
-                <h2>Zona de estudio</h2>
-
-                <p>
-                    Contamos con WiFi gratuito, mesas cómodas
-                    y música relajante para estudiantes.
-                </p>
             </section>
 
         </div>
 
+        <!-- SECCION CAFES -->
+        <section class="cafes">
+
+            <h2 class="titulo-cafe">
+                Nuestros Cafés
+            </h2>
+
+            <div class="contenedor-cafes">
+
+                <!-- CARD -->
+                <article class="card-cafe">
+
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=687&auto=format&fit=crop"
+                    alt="Café americano">
+
+                    <h3>Café Americano</h3>
+
+                    <p>
+                        Un café clásico e intenso ideal
+                        para comenzar el día.
+                    </p>
+
+                </article>
+
+                <!-- CARD -->
+                <article class="card-cafe">
+
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=687&auto=format&fit=crop"
+                    alt="Capuccino">
+
+                    <h3>Capuccino</h3>
+
+                    <p>
+                        Café cremoso con espuma suave
+                        y sabor equilibrado.
+                    </p>
+
+                </article>
+
+                <!-- CARD -->
+                <article class="card-cafe">
+
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=687&auto=format&fit=crop"
+                    alt="Chocolate caliente">
+
+                    <h3>Chocolate Caliente</h3>
+
+                    <p>
+                        Perfecto para relajarse mientras
+                        estudias o lees.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
         <!-- FORMULARIO -->
         <section class="pedido">
+
             <h2>Haz tu pedido</h2>
 
             <form>
 
                 <label>Nombre:</label>
+
                 <input type="text"
                 placeholder="Tu nombre"
                 required
                 minlength="3">
 
                 <label>Correo:</label>
+
                 <input type="email"
                 placeholder="ejemplo@gmail.com"
                 required>
@@ -102,23 +164,34 @@
                 <label>Bebida:</label>
 
                 <select required>
-                    <option value="">Selecciona una opción</option>
-                    <option>Café americano</option>
-                    <option>Cappuccino</option>
-                    <option>Chocolate caliente</option>
+
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option>Café Americano</option>
+
+                    <option>Capuccino</option>
+
+                    <option>Chocolate Caliente</option>
+
                 </select>
 
                 <label>Comentario:</label>
 
                 <textarea placeholder="Algo adicional..."></textarea>
 
-                <button type="submit">Enviar pedido</button>
+                <button type="submit">
+                    Enviar pedido
+                </button>
 
             </form>
+
         </section>
 
         <!-- TU AVANCE -->
         <section class="avance">
+
             <h2>Primeros pasos en HTML</h2>
 
             <article>
@@ -129,31 +202,50 @@
 
                 <h3>Hola mundo</h3>
 
-                <p>Bienvenidos al curso!!</p>
+                <p>
+                    Bienvenidos al curso
+                </p>
 
-                <h3>Te presento a nuestro planeta, Tierra:</h3>
+                <h3>
+                    Te presento a nuestro planeta, Tierra:
+                </h3>
 
                 <img src="https://img.freepik.com/vector-gratis/dibujado-mano-planeta-tierra-dibujo-ilustracion_23-2150573373.jpg"
-                alt="Planeta Tierra ilustrado"
+                alt="Planeta Tierra"
                 class="tierra">
 
-                <p>Publiqué mi proyecto en GITHUB</p>
-                <p>Descargué mi proyecto desde GitHub</p>
+                <p>
+                    Publiqué mi proyecto en GitHub
+                </p>
+
+                <p>
+                    Descargué mi proyecto desde GitHub
+                </p>
 
             </article>
+
         </section>
 
         <!-- ASIDE -->
         <aside>
+
             <h3>Promoción</h3>
-            <p>10% de descuento para estudiantes</p>
+
+            <p>
+                10% de descuento para estudiantes
+            </p>
+
         </aside>
 
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <p>Proyecto Web - Cafetería para estudiantes ☕</p>
+
+        <p>
+            Proyecto Web - Cafetería para estudiantes
+        </p>
+
     </footer>
 
 </body>
