@@ -147,91 +147,56 @@ nav{
 }
 
 /* =======================================================
-   FLEXBOX PRINCIPAL
+   FLEXBOX PRINCIPAL (MODIFICADO)
    ======================================================= */
-
-/*
-CONTENEDOR FLEX
-*/
-.contenedor-flex{
-
-    /* Activa flexbox */
+.contenedor-flex {
     display: flex;
-
-    /* Centra horizontalmente */
     justify-content: center;
-
-    /* Espacio entre tarjetas */
     gap: 25px;
-
-    /* Permite bajar tarjetas */
     flex-wrap: wrap;
-
-    /* Espaciado interno */
-    padding: 40px;
+    /* Cambiamos el padding para alinearlo al 80% de las otras secciones */
+    width: 80%;
+    margin: 40px auto;
+    padding: 0;
 }
 
 /* =======================================================
-   ITEMS FLEX
+   ITEMS FLEX (MODIFICADO)
    ======================================================= */
-
-/*
-TARJETAS
-*/
-.item-flex{
-
-    /* Fondo blanco */
+.item-flex {
     background-color: white;
-
-    /* Ancho fijo */
-    width: 350px;
-
-    /* Espaciado interno */
+    /* En pantallas grandes cada una ocupará el 50% menos el espacio del gap */
+    flex: 1 1 calc(50% - 15px);
+    /* Le ponemos un ancho mínimo para que en celulares se pongan una abajo de otra */
+    min-width: 300px; 
     padding: 25px;
-
-    /* Bordes redondeados */
     border-radius: 15px;
-
-    /* Sombra */
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-
-    /* Animación */
     transition: 0.3s;
+    
+    /* Centramos el contenido verticalmente por si una tarjeta queda más alta que otra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* EFECTO */
-
-.item-flex:hover{
-
-    /* Eleva tarjeta */
+.item-flex:hover {
     transform: translateY(-5px);
 }
 
-/* TITULOS */
-
-.item-flex h2{
-
+.item-flex h2 {
     color: #4b2e2e;
-
     margin-bottom: 15px;
 }
 
 /* =======================================================
-   IMAGEN PRINCIPAL
+   IMAGEN PRINCIPAL (MODIFICADO)
    ======================================================= */
-
-.item-flex img{
-
-    /* Ocupa ancho del contenedor */
+.item-flex img {
     width: 100%;
-
-    /* Altura fija */
-    height: 300px;
-
-    /* Recorta imagen correctamente */
+    /* Bajamos un poco la altura fija para que no sea un cuadrado gigante */
+    height: 220px; 
     object-fit: cover;
-
-    /* Bordes suaves */
     border-radius: 10px;
 }
 
