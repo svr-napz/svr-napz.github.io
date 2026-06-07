@@ -7,6 +7,7 @@
     <title>Cafe +</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -146,11 +147,12 @@
 
             <h2>Haz tu pedido</h2>
 
-            <form>
+            <form id = "formulario-pedido">
 
                 <label>Nombre:</label>
 
                 <input type="text"
+                id="nombre-cliente"
                 placeholder="Tu nombre"
                 required
                 minlength="3">
@@ -163,7 +165,7 @@
 
                 <label>Bebida:</label>
 
-                <select required>
+                <select id="bebida-seleccionada" required>
 
                     <option value="">
                         Selecciona una opción
