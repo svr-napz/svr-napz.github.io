@@ -149,24 +149,26 @@
 
             <h2>Haz tu pedido</h2>
 
-            <form>
+            <form id="formPedido">
 
-                <label>Nombre:</label>
+                <label for="nombre">Nombre:</label>
 
                 <input type="text"
+                id="nombre"
                 placeholder="Tu nombre"
                 required
                 minlength="3">
 
-                <label>Correo:</label>
+                <label for="correo">Correo:</label>
 
                 <input type="email"
+                id="correo"
                 placeholder="ejemplo@gmail.com"
                 required>
 
-                <label>Bebida:</label>
+                <label for="bebida">Bebida:</label>
 
-                <select required>
+                <select id="bebida" required>
 
                     <option value="">
                         Selecciona una opción
@@ -180,15 +182,20 @@
 
                 </select>
 
-                <label>Comentario:</label>
+                <label for="comentario">Comentario:</label>
 
-                <textarea placeholder="Algo adicional..."></textarea>
+                <textarea id="comentario" placeholder="Algo adicional..."></textarea>
 
                 <button type="submit">
                     Enviar pedido
                 </button>
 
             </form>
+            <p id="mensajePedido"></p>
+            <h3>Total de pedidos: </h3>
+            <p id="contadorPedidos">0</p>
+            <h3>Pedidos registrados: </h3>
+            <ul id="listaPedidos"></ul>
 
         </section>
 
