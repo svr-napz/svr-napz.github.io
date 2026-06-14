@@ -489,3 +489,45 @@ header button:hover {
     background-color: #6f4e37;
 }
 
+/* ==========================================
+   MENSAJES Y LISTA DE PEDIDOS
+   ========================================== */
+
+#mensajePedido{
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #4b2e2e;
+}
+
+#contadorPedidos{
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #6f4e37;
+
+    margin-bottom: 20px;
+}
+
+#listaPedidos{
+
+    margin-top: 15px;
+
+    padding-left: 20px;
+}
+
+#listaPedidos li{
+
+    margin-bottom: 10px;
+
+    background-color: #fff8f0;
+
+    padding: 10px;
+
+    border-radius: 8px;
+}
+
