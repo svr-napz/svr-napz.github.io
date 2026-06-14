@@ -140,3 +140,8 @@ formulario.addEventListener("submit", (event) => {
     formulario.reset();
 
 });
+
+console.log("Formulario:", formulario);
+console.log("Mensaje:", mensaje);
+console.log("Contador:", contador);
+console.log("Lista:", lista);
