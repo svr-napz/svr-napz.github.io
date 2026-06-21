@@ -1,47 +1,105 @@
+/* ==========================================
+   MENSAJE DE INICIO
+   ========================================== */
+
+// Verifica que el archivo JS se cargó correctamente
 console.log("Empezando a usar JavaScript");
-
-const titulo = document.querySelector("#titulo");
-const boton = document.querySelector("#btnCambiar");
-
-boton.addEventListener('click', () => {
-    titulo.textContent = '¡Bienvenido a Cafe +!';
-});
-console.log("Empezando a usar JavaScript");
-
-
 
 
 /* ==========================================
-   FORMULARIO
+   CAMBIO DE SALUDO
    ========================================== */
 
-const formulario =
-    document.querySelector("#formPedido");
+// Selecciona el párrafo con id="titulo"
+const titulo = document.querySelector("#titulo");
 
-const mensaje =
-    document.querySelector("#mensajePedido");
+// Selecciona el botón "Cambiar saludo"
+const botonSaludo = document.querySelector("#btnCambiar");
 
-const contador =
-    document.querySelector("#contadorPedidos");
+// Cuando hagan clic en el botón...
+botonSaludo.addEventListener("click", () => {
 
-const lista =
-    document.querySelector("#listaPedidos");
+    // Cambia el texto del párrafo
+    titulo.textContent = "¡Bienvenido a Cafe +!";
+
+});
+
+
+/* ==========================================
+   ELEMENTOS DEL FORMULARIO
+   ========================================== */
+
+// Formulario completo
+const formulario = document.querySelector("#formPedido");
+
+// Mensaje de confirmación o error
+const mensaje = document.querySelector("#mensajePedido");
+
+// Contador visual
+const contador = document.querySelector("#contadorPedidos");
+
+// Lista donde aparecerán los pedidos
+const lista = document.querySelector("#listaPedidos");
 
 
 /* ==========================================
    ARRAY DE PEDIDOS
    ========================================== */
 
+// Aquí se guardarán todos los pedidos
 const pedidos = [];
 
 
 /* ==========================================
-   EVENTO SUBMIT
+   FUNCION RENDER
+   ========================================== */
+
+// Esta función dibuja todos los pedidos
+const renderPedidos = () => {
+
+    lista.innerHTML = pedidos
+    .map((p,index) => `
+
+        <li>
+
+            <strong>${p.nombre}</strong>
+
+            pidió
+
+            <strong>${p.bebida}</strong>
+
+            <button
+                data-id="${index}"
+                data-action="eliminar">
+
+                Eliminar
+
+            </button>
+
+        </li>
+
+    `)
+    .join("");
+
+    // Actualiza el contador
+    contador.textContent = pedidos.length;
+
+};
+
+
+/* ==========================================
+   EVENTO SUBMIT DEL FORMULARIO
    ========================================== */
 
 formulario.addEventListener("submit", (event) => {
 
+    // Evita que la página se recargue
     event.preventDefault();
+
+
+    /* ==========================
+       OBTENER DATOS
+       ========================== */
 
     const nombre =
         document.querySelector("#nombre")
@@ -62,8 +120,9 @@ formulario.addEventListener("submit", (event) => {
         .value
         .trim();
 
+
     /* ==========================
-       VALIDACION
+       VALIDACIONES
        ========================== */
 
     if (nombre === "") {
@@ -82,8 +141,9 @@ formulario.addEventListener("submit", (event) => {
         return;
     }
 
+
     /* ==========================
-       OBJETO PEDIDO
+       CREAR OBJETO PEDIDO
        ========================== */
 
     const pedido = {
@@ -95,43 +155,31 @@ formulario.addEventListener("submit", (event) => {
         bebida: bebida,
 
         comentario: comentario
+
     };
 
+
     /* ==========================
-       ARRAY
+       GUARDAR EN ARRAY
        ========================== */
 
     pedidos.push(pedido);
 
-    console.log(pedidos);
 
     /* ==========================
-       MENSAJE
+       MENSAJE AL USUARIO
        ========================== */
 
     mensaje.textContent =
         `Gracias ${nombre}, tu pedido fue registrado`;
 
-    /* ==========================
-       CONTADOR
-       ========================== */
-
-    contador.textContent =
-        pedidos.length;
 
     /* ==========================
-       MOSTRAR PEDIDOS
+       ACTUALIZAR LISTA
        ========================== */
 
-    lista.innerHTML = pedidos
-        .map(p => `
-            <li>
-                <strong>${p.nombre}</strong>
-                pidió
-                <strong>${p.bebida}</strong>
-            </li>
-        `)
-        .join("");
+    renderPedidos();
+
 
     /* ==========================
        LIMPIAR FORMULARIO
@@ -140,6 +188,48 @@ formulario.addEventListener("submit", (event) => {
     formulario.reset();
 
 });
+
+
+/* ==========================================
+   ELIMINAR PEDIDOS
+   ========================================== */
+
+lista.addEventListener("click", (event) => {
+
+    // Detecta si se hizo clic en un botón
+    const botonEliminar =
+        event.target.closest("button");
+
+    // Si no se hizo clic en un botón
+    if (!botonEliminar) {
+
+        return;
+    }
+
+    // Obtiene el id almacenado en data-id
+    const id =
+        Number(botonEliminar.dataset.id);
+
+    // Obtiene la acción almacenada
+    const accion =
+        botonEliminar.dataset.action;
+
+    // Si la acción es eliminar
+    if (accion === "eliminar") {
+
+        // Elimina 1 elemento desde la posición id
+        pedidos.splice(id, 1);
+
+        // Vuelve a dibujar la lista
+        renderPedidos();
+    }
+
+});
+
+
+/* ==========================================
+   DEBUG
+   ========================================== */
 
 console.log("Formulario:", formulario);
 console.log("Mensaje:", mensaje);
