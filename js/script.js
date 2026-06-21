@@ -164,6 +164,7 @@ formulario.addEventListener("submit", (event) => {
        ========================== */
 
     pedidos.push(pedido);
+    console.log("Pedidos", pedidos);
 
 
     /* ==========================
